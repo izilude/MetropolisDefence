@@ -107,10 +107,5 @@ namespace Assets.RTSCore.WorldObject.Creep
                 Debug.Log("Path To Headquarters FAILED!");
             }
         }
-
-        public override Information.Information GetInformation()
-        {
-            return null;
-        }
     }
 }

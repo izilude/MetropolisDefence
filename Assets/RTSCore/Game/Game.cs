@@ -1,7 +1,6 @@
 ﻿using UnityEditorInternal;
 using UnityEngine;
 using System.Collections.Generic;
-using Assets.RTSCore.CustomEngine;
 using Assets.RTSCore.WorldMap;
 
 namespace Assets.RTSCore.Game
@@ -32,7 +31,6 @@ namespace Assets.RTSCore.Game
             GameTimeManager.CurrentGameTime = new GameDateTime();
             State = GameState.Planet;
             ActivePlayer = Instantiate(ActivePlayer);
-            BackendEngine.Initialize();
             WorldMap = Instantiate(WorldMap);
 
             Instance = this;

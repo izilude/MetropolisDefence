@@ -15,10 +15,5 @@ namespace Assets.RTSCore.WorldObject.Resources
         {
 			base.Update();
 		}
-
-        public override Information.Information GetInformation()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

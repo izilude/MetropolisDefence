@@ -33,11 +33,11 @@ namespace Assets.RTSCore.WorldObject.Units
 			}
 			else if (State == UnitState.Walking)
             {
-				if (_arrivedAtWaypoint && CurrentRequest.State == RequestState.InProcess) 
+				if (ArrivedAtWaypoint && CurrentRequest.State == RequestState.InProcess) 
 				{
 					FillRequest();
 				} 
-				else if (_arrivedAtWaypoint && CurrentRequest.State == RequestState.Filled) 
+				else if (ArrivedAtWaypoint && CurrentRequest.State == RequestState.Filled) 
 				{
 					CompleteRequest();
 				}

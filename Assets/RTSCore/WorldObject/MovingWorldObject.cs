@@ -11,8 +11,10 @@ namespace Assets.RTSCore.WorldObject
 {
 	public abstract class MovingWorldObject : WorldObject
 	{
-		public UnitInformation Information;
-		public List<Tile> WayPoints;
+	    public float WalkSpeed;
+	    public float RunSpeed;
+
+        public List<Tile> WayPoints;
 		
 		private List<Tile> _movementQueue;
 		public List<Tile> MovementQueue 
@@ -39,21 +41,16 @@ namespace Assets.RTSCore.WorldObject
 		}
 		
 		// Update is called once per frame
-		protected bool _arrivedAtWaypoint;
+		protected bool ArrivedAtWaypoint;
 		protected override void Update()
 		{
 			base.Update();
 
 			if (State == UnitState.Walking) 
 			{
-				float speed = Information.WalkSpeed;
-				_arrivedAtWaypoint = Move(speed);
+				float speed = WalkSpeed;
+				ArrivedAtWaypoint = Move(speed);
 			}
-		}
-		
-		public override Information.Information GetInformation ()
-		{
-			return Information;
 		}
 
 		public void AddTileToMoveQueue(Tile tile) 
@@ -123,7 +120,7 @@ namespace Assets.RTSCore.WorldObject
 		
 		private bool MoveTowardCurrentTile() 
 		{
-			float speed = Information.WalkSpeed * GameTimeManager.DeltaTime*CurrentTile.SpeedFactor;
+			float speed = WalkSpeed * GameTimeManager.DeltaTime*CurrentTile.SpeedFactor;
 			
 			Vector3 tilePosition = CurrentTile.transform.position;
 			Vector3 unitPosition = transform.position;

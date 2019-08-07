@@ -13,10 +13,5 @@
 		{
 			base.Update();
 		}
-
-        public override Information.Information GetInformation()
-	    {
-	        return null;
-	    }
 	}
 }

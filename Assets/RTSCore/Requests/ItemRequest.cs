@@ -60,16 +60,14 @@ namespace Assets.RTSCore.Requests
 			string line = string.Empty;
 			if (ProviderOfItem != null) 
 			{
-				BuildingInformation info = ProviderOfItem.GetInformation() as BuildingInformation;
 				line += " ";
-				line += info.Name;
+				line += ProviderOfItem.Name;
 			} 
 
 			if (TransporterOfItem != null) 
 			{
-				BuildingInformation info = TransporterOfItem.GetInformation() as BuildingInformation;
 				line += " ";
-				line += info.Name;
+				line += TransporterOfItem.Name;
 			}
 
 			line += String.Format(" {0} {1}", Name, Amount);
@@ -155,15 +153,7 @@ namespace Assets.RTSCore.Requests
 		    float pathScore;
 			int pathlength;
 
-			Information.Information info1 = worldObject.GetInformation();
-			Information.Information info2 = InitiatorOfRequest.GetInformation();
-
-			if (info1 == null || info2 == null) 
-			{
-				return ;
-			}
-
-			if (info1.Name == info2.Name)
+			if (worldObject.Name == InitiatorOfRequest.Name)
 			{
 				return;
 			}

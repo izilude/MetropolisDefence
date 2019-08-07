@@ -1,4 +1,5 @@
-﻿using Assets.RTSCore.Level;
+﻿using System;
+using Assets.RTSCore.Level;
 using Assets.RTSCore.Map;
 using Assets.RTSCore.Requests;
 using UnityEngine;
@@ -8,7 +9,12 @@ namespace Assets.RTSCore.WorldObject
 	[System.Serializable]
     public abstract class WorldObject : MonoBehaviour
     {
-		public Inventory.Inventory MyInventory;
+        public string Name;
+
+        public int MaxHealth;
+        public int CurrentHealth;
+
+        public Inventory.Inventory MyInventory;
 
         public bool IsDead { get; set; }
 		public Request CurrentRequest { get; set; }
@@ -23,8 +29,6 @@ namespace Assets.RTSCore.WorldObject
 		protected bool CurrentlySelected;
 
 		public TerrainType TerrainTypeToChangeTile = TerrainType.None;
-
-		public abstract Information.Information GetInformation();
 
 		public virtual bool WantsToKeepItem(string itemName) 
 		{
@@ -45,9 +49,7 @@ namespace Assets.RTSCore.WorldObject
         // Update is called once per frame
         protected virtual void Update()
         {
-			var info = GetInformation ();
-
-			if (info != null && GetInformation().MaxHealth != 0 && GetInformation().CurrentHealth <= 0) 
+			if (MaxHealth != 0 && CurrentHealth <= 0) 
 			{
 				IsDead = true;
 				GameObject.Destroy(this.gameObject);

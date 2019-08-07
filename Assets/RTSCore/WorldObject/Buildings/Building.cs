@@ -150,7 +150,7 @@ namespace Assets.RTSCore.WorldObject.Buildings
 
         public void RemoveCondition(string condition)
         {
-            for(int i=_activeConditions.Count-1;i>=0;i--)
+            for (int i = _activeConditions.Count - 1; i >= 0; i--)
             {
                 if (_activeConditions[i] == condition)
                 {
@@ -158,11 +158,6 @@ namespace Assets.RTSCore.WorldObject.Buildings
                     return;
                 }
             }
-        }
-
-        public override Information.Information GetInformation()
-        {
-            return Information;
         }
 
         public bool CanRetrieveItem(string itemName)

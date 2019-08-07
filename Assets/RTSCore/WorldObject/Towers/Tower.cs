@@ -56,7 +56,7 @@ namespace Assets.RTSCore.WorldObject.Towers
 		{
 			_currentReloadTime = 0;
 			TrySpawnAmmo(target);
-			target.GetInformation().CurrentHealth -= _currentAmmo.Damage;
+			target.CurrentHealth -= _currentAmmo.Damage;
 		}
 
 		protected Ammunition.Ammunition SelectAmmunition() 

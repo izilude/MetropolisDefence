@@ -125,7 +125,7 @@ namespace Assets.RTSCore.Level
                     {
                         var conversion = conversions[i];
                         string buildingName = conversion.Building;
-                        if (building.Information.Name == buildingName)
+                        if (building.Name == buildingName)
                         {
                             building.ItemFlags.Add(new ItemBuildingFlags
                             {

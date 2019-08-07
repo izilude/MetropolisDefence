@@ -101,9 +101,8 @@ namespace Assets.RTSCore.Requests
             string line = string.Empty;
             if (ServiceProvider != null)
             {
-                BuildingInformation info = ServiceProvider.GetInformation() as BuildingInformation;
                 line += " ";
-                if (info != null) line += info.Name;
+                line += ServiceProvider.Name;
             }
 
             line += String.Format(" {0}", ServiceNeeded.Name);

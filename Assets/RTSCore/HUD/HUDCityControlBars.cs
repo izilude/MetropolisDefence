@@ -69,16 +69,13 @@ namespace Assets.RTSCore.HUD
             GUIStyle style = new GUIStyle();
             style.normal.textColor = HUDStyles.TEXT_COLOR;
 
-            Information.Information info = selectedWorldObject.GetInformation();
-            if (info == null) { return; }
-
             int y = (int)bottomBar.y + HUDStyles.INFO_TEXT_SPACING;
 
             string line = string.Empty;
             if (selectedWorldObject is ProductionBuilding)
             {
                 ProductionBuilding productionBuilding = selectedWorldObject as ProductionBuilding;
-                line = String.Format("{0} ({1}/{2})", info.Name, productionBuilding.CurrentPopulation, productionBuilding.MaxPopulation);
+                line = String.Format("{0} ({1}/{2})", selectedWorldObject.Name, productionBuilding.CurrentPopulation, productionBuilding.MaxPopulation);
 
                 Texture2D texture = new Texture2D(1, 1);
                 texture.SetPixel(0, 0, Color.grey);
@@ -110,12 +107,12 @@ namespace Assets.RTSCore.HUD
             else if (selectedWorldObject is Building)
             {
                 Building building = selectedWorldObject as Building;
-                line = String.Format("{0} ({1}/{2})", info.Name, building.CurrentPopulation, building.MaxPopulation);
+                line = String.Format("{0} ({1}/{2})", selectedWorldObject.Name, building.CurrentPopulation, building.MaxPopulation);
             }
             else if (selectedWorldObject is Unit)
             {
                 Unit unit = selectedWorldObject as Unit;
-                line = String.Format("{0}", info.Name);
+                line = String.Format("{0}", selectedWorldObject.Name);
             }
 
             GUI.Label(new Rect(bottomBar.x + (bottomBar.width - 200) / 2, y, 200, HUDStyles.INFO_TEXT_SPACING), line, style);
@@ -327,14 +324,10 @@ namespace Assets.RTSCore.HUD
 
             foreach (Request request in requests)
             {
-                var info = request.InitiatorOfRequest.GetInformation();
-                if (info is BuildingInformation)
-                {
-                    y += HUDStyles.INFO_TEXT_SPACING;
-                    string line = String.Format("{0} {2}: {1}", (info as BuildingInformation).Name, request.Info(), request.State);
+                y += HUDStyles.INFO_TEXT_SPACING;
+                string line = String.Format("{0} {2}: {1}", request.InitiatorOfRequest.Name, request.Info(), request.State);
 
-                    GUI.Label(new Rect(bottomBar.x + (bottomBar.width - 200) / 2, y, 200, HUDStyles.INFO_TEXT_SPACING), line, style);
-                }
+                GUI.Label(new Rect(bottomBar.x + (bottomBar.width - 200) / 2, y, 200, HUDStyles.INFO_TEXT_SPACING), line, style);
             }
         }
 
