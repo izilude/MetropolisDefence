@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: DefaultHUD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e24b1f5d7a485439f4e0fb44c5d4f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBarSkin: {fileID: 2800000, guid: 6eb6e034fea2b244caed77441d5c10ac, type: 3}
+  leftBottomBarSkin: {fileID: 11400000, guid: 96e6893873e0aaa44a7d4fa80faae200, type: 2}
+  rightBottomBarSkin: {fileID: 11400000, guid: 9dce36f4349fa2c4a85f787b99fd904a, type: 2}
+  bottomBarTexture: {fileID: 2800000, guid: 2b5691bc7b4f3e04b970be9abbdc12b3, type: 3}
+  miniMapSkin: {fileID: 0}
+  BuildTabList:
+  - Image: {fileID: 2800000, guid: 53618ced4e3f5cc438bbcb7459483885, type: 3}
+    HoverImage: {fileID: 2800000, guid: 4869881f85f804f41bcaca9ac24acfae, type: 3}
+    InfrastructurePrefabList:
+    - {fileID: 100002, guid: 0569d7ea24bc9a24388c31bcdb3c0a2b, type: 2}
+    - {fileID: 1689461965562910, guid: 67d86e243597a3744b0f262b75b507d0, type: 2}
+    - {fileID: 100002, guid: 85ba74cd79eb66941a0cad2c2826f458, type: 2}
+    - {fileID: 1623332668061490, guid: 68f05cf4f959b6f4cb478bd67a65ec55, type: 2}
+  - Image: {fileID: 2800000, guid: 53618ced4e3f5cc438bbcb7459483885, type: 3}
+    HoverImage: {fileID: 2800000, guid: 2ffbd642b9be66d4a9b75b220c96e07c, type: 3}
+    InfrastructurePrefabList:
+    - {fileID: 100004, guid: 7508c2f070092614a8ed14d9b9acde7e, type: 2}
+    - {fileID: 1269872860418210, guid: 97964f1e3c228fe459a9e298bb46e5f5, type: 2}
+    - {fileID: 1900552455587748, guid: ce6466e24150a2b45a597131165a29e7, type: 2}
+  - Image: {fileID: 2800000, guid: 53618ced4e3f5cc438bbcb7459483885, type: 3}
+    HoverImage: {fileID: 2800000, guid: 2ffbd642b9be66d4a9b75b220c96e07c, type: 3}
+    InfrastructurePrefabList:
+    - {fileID: 1196222637231562, guid: ae6c68c9bdf0ca542a820f69796874d7, type: 2}
+    - {fileID: 1277288188029032, guid: 79d6a2f9390acdc4bae186a7f6ab453c, type: 2}
+  - Image: {fileID: 2800000, guid: 53618ced4e3f5cc438bbcb7459483885, type: 3}
+    HoverImage: {fileID: 2800000, guid: 2ffbd642b9be66d4a9b75b220c96e07c, type: 3}
+    InfrastructurePrefabList:
+    - {fileID: 100004, guid: 871f3c220aa35864abe2574ac3e136c1, type: 2}
+  InventoryManagerBackgroundSkin: {fileID: 11400000, guid: d7b4726f5324a7443bc222f110717f66,
+    type: 2}
+  ProductionManagerBackgroundSkin: {fileID: 11400000, guid: d7b4726f5324a7443bc222f110717f66,
+    type: 2}
+  GameEventBackgroundSkin: {fileID: 11400000, guid: d7b4726f5324a7443bc222f110717f66,
+    type: 2}
+  Ready: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1

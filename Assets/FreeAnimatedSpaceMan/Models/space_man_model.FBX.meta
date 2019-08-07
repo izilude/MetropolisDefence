@@ -1,0 +1,515 @@
+fileFormatVersion: 2
+guid: cc50427257039b6489d5f8299ece3b8b
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Arm_02_L
+    100002: Arm_02_R
+    100004: Belt_02
+    100006: Head
+    100008: Helmet_02
+    100010: Jets_02
+    100012: LCalf
+    100014: LCollarbone
+    100016: Leg_02_L
+    100018: Leg_02_R
+    100020: LFoot
+    100022: LForearm
+    100024: Long_Rifle_02
+    100026: LPalm
+    100028: LThigh
+    100030: LUpperarm
+    100032: Neck
+    100034: PalmBone001
+    100036: PalmBone001 1
+    100038: PalmBone002
+    100040: PalmBone002 1
+    100042: Pelvis
+    100044: Plane.013
+    100046: RArmCollarbone
+    100048: RArmForearm
+    100050: RArmIKTarget
+    100052: RArmPalm
+    100054: RArmUpperarm
+    100056: RCalf
+    100058: RFoot
+    100060: Ribcage
+    100062: RThigh
+    100064: //RootNode
+    100066: SpaceMan_Base
+    100068: SpaceMan_Clothe
+    100070: Spine1
+    100072: Spine2
+    100074: Suit_02
+    400000: Arm_02_L
+    400002: Arm_02_R
+    400004: Belt_02
+    400006: Head
+    400008: Helmet_02
+    400010: Jets_02
+    400012: LCalf
+    400014: LCollarbone
+    400016: Leg_02_L
+    400018: Leg_02_R
+    400020: LFoot
+    400022: LForearm
+    400024: Long_Rifle_02
+    400026: LPalm
+    400028: LThigh
+    400030: LUpperarm
+    400032: Neck
+    400034: PalmBone001
+    400036: PalmBone001 1
+    400038: PalmBone002
+    400040: PalmBone002 1
+    400042: Pelvis
+    400044: Plane.013
+    400046: RArmCollarbone
+    400048: RArmForearm
+    400050: RArmIKTarget
+    400052: RArmPalm
+    400054: RArmUpperarm
+    400056: RCalf
+    400058: RFoot
+    400060: Ribcage
+    400062: RThigh
+    400064: //RootNode
+    400066: SpaceMan_Base
+    400068: SpaceMan_Clothe
+    400070: Spine1
+    400072: Spine2
+    400074: Suit_02
+    2300000: Arm_02_L
+    2300002: Arm_02_R
+    2300004: Helmet_02
+    2300006: Jets_02
+    2300008: Leg_02_L
+    2300010: Leg_02_R
+    2300012: Long_Rifle_02
+    2300014: Plane.013
+    2300016: Suit_02
+    3300000: Arm_02_L
+    3300002: Arm_02_R
+    3300004: Helmet_02
+    3300006: Jets_02
+    3300008: Leg_02_L
+    3300010: Leg_02_R
+    3300012: Long_Rifle_02
+    3300014: Plane.013
+    3300016: Suit_02
+    4300000: Belt_02
+    4300002: Leg_02_L
+    4300004: Leg_02_R
+    4300006: Arm_02_L
+    4300008: Helmet_02
+    4300010: Arm_02_R
+    4300012: Suit_02
+    4300014: Jets_02
+    4300016: SpaceMan_Clothe
+    4300018: Plane.013
+    4300020: Long_Rifle_02
+    4300022: SpaceMan_Base
+    9500000: //RootNode
+    13700000: Belt_02
+    13700002: SpaceMan_Base
+    13700004: SpaceMan_Clothe
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LThigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RThigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LCalf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RCalf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine1
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine2
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LCollarbone
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RArmCollarbone
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LUpperarm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RArmUpperarm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LForearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RArmForearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LPalm
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RArmPalm
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: space_man_model(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Belt_02
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Pelvis
+      position: {x: .00155352592, y: .116124488, z: -.0125085227}
+      rotation: {x: .49912706, y: -.500871539, z: -.499126941, w: .50087142}
+      scale: {x: 1.00000012, y: 1.0000006, z: 1.00000036}
+      transformModified: 1
+    - name: LThigh
+      position: {x: -.00334236072, y: .00911330339, z: .0309929978}
+      rotation: {x: -.0121551985, y: .989133239, z: -.0240067914, w: .144538954}
+      scale: {x: .999999642, y: 1.00000036, z: 1.00000024}
+      transformModified: 1
+    - name: LCalf
+      position: {x: -.0746344477, y: 5.86115583e-08, z: 1.03738458e-07}
+      rotation: {x: -.0257268306, y: .0933027491, z: .0698251128, w: .992853045}
+      scale: {x: 1.00000119, y: 1.00000119, z: .999999523}
+      transformModified: 1
+    - name: Leg_02_L
+      position: {x: -4.76837148e-09, y: -2.38418574e-09, z: 0}
+      rotation: {x: -4.470348e-08, y: 3.72528994e-08, z: -5.96046377e-08, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LFoot
+      position: {x: -.0327730253, y: 6.97288494e-09, z: -1.75497288e-08}
+      rotation: {x: -.0666374639, y: -.00507586263, z: -.547032833, w: .834439278}
+      scale: {x: .999999344, y: 1.00000095, z: .999999762}
+      transformModified: 1
+    - name: Plane.013
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -8.57857412e-06, y: 2.70585412e-11, z: 2.38418608e-07, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RThigh
+      position: {x: -.00334265735, y: .00911330152, z: -.0278859511}
+      rotation: {x: -.00969765149, y: .988643169, z: .0260229148, w: -.147694051}
+      scale: {x: .999999523, y: 1.00000048, z: 1.0000006}
+      transformModified: 1
+    - name: RCalf
+      position: {x: -.0755596086, y: 2.62386123e-07, z: 8.29155411e-08}
+      rotation: {x: .0228874832, y: -.112780854, z: .0686970875, w: .990978003}
+      scale: {x: .999999285, y: 1.00000083, z: 1.00000036}
+      transformModified: 1
+    - name: Leg_02_R
+      position: {x: 3.33785977e-08, y: -5.24520871e-08, z: 0}
+      rotation: {x: -2.70549322e-07, y: -4.11178718e-07, z: -2.08616299e-07, w: 1}
+      scale: {x: 1.00000119, y: .999999702, z: .999998868}
+      transformModified: 1
+    - name: RFoot
+      position: {x: -.0327637754, y: 3.36259998e-09, z: 1.1836665e-09}
+      rotation: {x: .062862128, y: .0212928355, z: -.549523771, w: .832837701}
+      scale: {x: .999998152, y: 1.00000167, z: 1.00000072}
+      transformModified: 1
+    - name: Spine1
+      position: {x: -.00883434992, y: .0102793863, z: -3.801365e-09}
+      rotation: {x: 5.95217458e-08, y: -5.76594594e-08, z: .0171890985, w: .99985224}
+      scale: {x: 1.00000036, y: 1.00000072, z: 1.00000024}
+      transformModified: 1
+    - name: Spine2
+      position: {x: -.0675731748, y: -1.4040288e-08, z: 2.01552885e-09}
+      rotation: {x: -4.02018472e-08, y: 8.34390121e-08, z: .0459701605, w: .998942852}
+      scale: {x: .99999994, y: .999999881, z: .999999285}
+      transformModified: 1
+    - name: Ribcage
+      position: {x: -.0596730858, y: -9.09593467e-09, z: -8.33715674e-09}
+      rotation: {x: -4.68252637e-08, y: -5.04410025e-08, z: -.0648752302, w: .997893393}
+      scale: {x: .999999642, y: .999999285, z: 1.00000012}
+      transformModified: 1
+    - name: LCollarbone
+      position: {x: .0117196841, y: .00744140754, z: .038590949}
+      rotation: {x: -.0954653844, y: .807217538, z: .0989797488, w: .574011445}
+      scale: {x: 1.00000036, y: 1.00000083, z: 1.00000012}
+      transformModified: 1
+    - name: LUpperarm
+      position: {x: -.0327254087, y: -1.5050448e-08, z: 5.13574463e-08}
+      rotation: {x: .135522038, y: -.191283479, z: .00642250339, w: .972112775}
+      scale: {x: 1, y: 1.00000024, z: .999999225}
+      transformModified: 1
+    - name: LForearm
+      position: {x: -.0579917505, y: -4.72649875e-09, z: 9.79217987e-08}
+      rotation: {x: .0259568151, y: -.0093768239, z: -.0139209107, w: .99952215}
+      scale: {x: 1.00000143, y: 1, z: 1.00000036}
+      transformModified: 1
+    - name: Arm_02_L
+      position: {x: 7.72476199e-07, y: 9.91821253e-07, z: -5.34057563e-07}
+      rotation: {x: -2.38419887e-07, y: 8.78236904e-07, z: 1.49756704e-06, w: 1}
+      scale: {x: .999996543, y: 1.0000037, z: .999999642}
+      transformModified: 1
+    - name: LPalm
+      position: {x: -.0602193959, y: -8.99554635e-08, z: -1.0607763e-06}
+      rotation: {x: -.711045027, y: .011989438, z: .0285671633, w: .702463686}
+      scale: {x: .999995589, y: 1.00000155, z: 1.00000274}
+      transformModified: 1
+    - name: PalmBone001
+      position: {x: -.0399783477, y: .000424832368, z: .000624687935}
+      rotation: {x: -9.01503849e-09, y: 2.08836202e-08, z: 1.6434333e-08, w: 1}
+      scale: {x: .999995112, y: 1.00000131, z: 1.00000608}
+      transformModified: 1
+    - name: PalmBone002
+      position: {x: -.00989434216, y: .000773300533, z: .0165970605}
+      rotation: {x: .079651922, y: .515194237, z: .0261692628, w: .852962852}
+      scale: {x: .999994278, y: 1.00000191, z: 1.00000739}
+      transformModified: 1
+    - name: Neck
+      position: {x: -.000154184876, y: -.00708145509, z: 1.71294701e-10}
+      rotation: {x: 5.00495858e-08, y: 5.75104941e-08, z: .146858111, w: .989157617}
+      scale: {x: .99999994, y: 1.00000024, z: 1.00000012}
+      transformModified: 1
+    - name: Head
+      position: {x: -.0526083149, y: -1.13297132e-08, z: -5.24477262e-09}
+      rotation: {x: -5.00495858e-08, y: -5.75104941e-08, z: -.146858111, w: .989157617}
+      scale: {x: .999999762, y: 1.00000012, z: .999999881}
+      transformModified: 1
+    - name: Helmet_02
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 3.7252843e-09, y: -3.55271368e-15, z: -7.10542736e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RArmCollarbone
+      position: {x: .0117196124, y: .00744142057, z: -.0385909379}
+      rotation: {x: -.0954654738, y: .807216227, z: -.0989798754, w: -.574013293}
+      scale: {x: 1.00000024, y: 1.0000006, z: 1.00000012}
+      transformModified: 1
+    - name: RArmUpperarm
+      position: {x: -.0327254348, y: -6.92675712e-08, z: -1.82188231e-07}
+      rotation: {x: -.135522068, y: .191283345, z: .00642243866, w: .972112775}
+      scale: {x: 1.00000143, y: .999999881, z: .999999106}
+      transformModified: 1
+    - name: RArmForearm
+      position: {x: -.0579916313, y: 1.19698038e-08, z: -2.0961599e-07}
+      rotation: {x: -.025956776, y: .0093768388, z: -.0139209023, w: .999522209}
+      scale: {x: 1.00000215, y: .99999994, z: .999999046}
+      transformModified: 1
+    - name: Arm_02_R
+      position: {x: -8.13007375e-07, y: -1.02996819e-06, z: -5.14984094e-07}
+      rotation: {x: 2.30969377e-07, y: -8.69855057e-07, z: 1.52736936e-06, w: 1}
+      scale: {x: .999996483, y: 1.0000037, z: .999999642}
+      transformModified: 1
+    - name: RArmPalm
+      position: {x: -.0602191351, y: -8.02728479e-08, z: 8.6711492e-07}
+      rotation: {x: .711044967, y: -.0119894417, z: .0285671651, w: .702463806}
+      scale: {x: .99999541, y: 1.00000203, z: 1.00000143}
+      transformModified: 1
+    - name: PalmBone001 1
+      position: {x: -.0399779454, y: .000424472353, z: -.000624725013}
+      rotation: {x: -1.04563274e-08, y: -7.96960631e-09, z: 4.54650753e-08, w: 1}
+      scale: {x: .99999553, y: 1.00000179, z: 1.00000453}
+      transformModified: 1
+    - name: PalmBone002 1
+      position: {x: -.00989396404, y: .000772910251, z: -.0165970735}
+      rotation: {x: -.0796519518, y: -.515194356, z: .0261693411, w: .852962792}
+      scale: {x: .999998152, y: 1.00000024, z: 1.00000334}
+      transformModified: 1
+    - name: SpaceMan_Clothe
+      position: {x: .191522643, y: -.0201491062, z: 1.23679635e-08}
+      rotation: {x: 2.76213519e-09, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Suit_02
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 2.76213519e-09, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Jets_02
+      position: {x: .191522643, y: -.0201491062, z: 3.12924398e-09}
+      rotation: {x: 2.76395373e-09, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: RArmIKTarget
+      position: {x: .0685834885, y: .153945565, z: .113067046}
+      rotation: {x: .148220152, y: .663227201, z: .690657914, w: -.247289598}
+      scale: {x: .999997556, y: .999998868, z: 1.0000037}
+      transformModified: 1
+    - name: Long_Rifle_02
+      position: {x: -7.67707775e-07, y: -3.24249271e-07, z: -6.86645478e-07}
+      rotation: {x: 1.00694848e-07, y: -5.741843e-09, z: -.130526185, w: .991444886}
+      scale: {x: .999998391, y: .99999994, z: 1.00000179}
+      transformModified: 1
+    - name: SpaceMan_Base
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
