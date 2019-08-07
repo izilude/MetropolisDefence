@@ -1,5 +1,4 @@
-﻿using UnityEditorInternal;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 using Assets.RTSCore.WorldMap;
 

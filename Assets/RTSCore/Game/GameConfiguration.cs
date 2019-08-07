@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Xml.Serialization;
 using Assets.RTSCore.Data;
 using Assets.RTSCore.Level;
 using Assets.RTSCore.TerrainObjects;

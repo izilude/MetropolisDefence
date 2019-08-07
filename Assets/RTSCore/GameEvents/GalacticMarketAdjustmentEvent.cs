@@ -1,6 +1,4 @@
 ﻿using System;
-using Assets.RTSCore.Economy;
-using Assets.RTSCore.Inventory;
 
 namespace Assets.RTSCore.GameEvents
 {

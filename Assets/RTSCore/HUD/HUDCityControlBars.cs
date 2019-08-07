@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Assets.RTSCore.AI;
 using Assets.RTSCore.Game;
-using Assets.RTSCore.Information;
 using Assets.RTSCore.Misc;
 using Assets.RTSCore.Requests;
 using Assets.RTSCore.Styles;

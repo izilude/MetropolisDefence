@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Assets.RTSCore.Economy;
-using Assets.RTSCore.Inventory;
 using Assets.RTSCore.Styles;
 using UnityEngine;
 

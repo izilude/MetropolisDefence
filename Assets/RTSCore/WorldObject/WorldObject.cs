@@ -1,6 +1,4 @@
-﻿using System;
-using Assets.RTSCore.Level;
-using Assets.RTSCore.Map;
+﻿using Assets.RTSCore.Map;
 using Assets.RTSCore.Requests;
 using UnityEngine;
 

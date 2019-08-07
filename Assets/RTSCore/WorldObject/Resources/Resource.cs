@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Assets.RTSCore.WorldObject.Resources 
+﻿namespace Assets.RTSCore.WorldObject.Resources 
 {
 	public class Resource : WorldObject
 	{

@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
 using Assets.RTSCore.Game;
-using Assets.RTSCore.Information;
 using Assets.RTSCore.Interfaces;
 using Assets.RTSCore.Inventory;
-using Assets.RTSCore.Level;
 using Assets.RTSCore.Map;
 using Assets.RTSCore.Misc;
 using Assets.RTSCore.Requests;
@@ -29,7 +27,6 @@ namespace Assets.RTSCore.WorldObject.Buildings
         private PeriodicEvent _checkIfWorkingPeriodicEvent;
 
         public List<Item> ItemsNeededPerTick;
-        public BuildingInformation Information;
         public BuildingState State { get; set; }
 
         public int MaxPopulation;

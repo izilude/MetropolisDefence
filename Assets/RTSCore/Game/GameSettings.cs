@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Assets.RTSCore.Game
+﻿namespace Assets.RTSCore.Game
 {
     public class GameSettings
     {

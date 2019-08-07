@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Assets.RTSCore.Game;
-using Assets.RTSCore.Information;
-using Assets.RTSCore.Level;
 using Assets.RTSCore.Map;
 using Assets.RTSCore.Misc;
 using UnityEngine;

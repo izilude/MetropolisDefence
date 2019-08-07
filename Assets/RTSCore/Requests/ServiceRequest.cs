@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Assets.RTSCore.AI;
-using Assets.RTSCore.Information;
 using Assets.RTSCore.Interfaces;
 using Assets.RTSCore.Misc;
 using Assets.RTSCore.Services;

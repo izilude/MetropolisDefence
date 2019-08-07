@@ -3,7 +3,6 @@ using Assets.RTSCore.AI;
 using Assets.RTSCore.Game;
 using Assets.RTSCore.Interfaces;
 using Assets.RTSCore.Inventory;
-using Assets.RTSCore.Level;
 using Assets.RTSCore.Map;
 using Assets.RTSCore.Misc;
 using Assets.RTSCore.Requests;

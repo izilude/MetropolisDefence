@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Assets.RTSCore.Level;
 using UnityEngine;
 
 namespace Assets.RTSCore.Map
