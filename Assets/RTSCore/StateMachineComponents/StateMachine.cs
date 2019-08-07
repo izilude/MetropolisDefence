@@ -1,10 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using Assets.RTSCore.Game;
+using UnityEngine;
 
 namespace Assets.RTSCore.StateMachineComponents
 {
-    public class StateMachine : IStateMachine
+    public class StateMachine : MonoBehaviour, IStateMachine
     {
+        protected virtual void Update()
+        {
+            CallUpdateFunction();
+        }
+
         public IState CurrentState { get; private set; }
 
         public void MoveToState(IState nextState)
@@ -79,28 +86,46 @@ namespace Assets.RTSCore.StateMachineComponents
             States.Add(state.Name, state);
         }
 
+        public void CallUpdateFunction()
+        {
+            if (CurrentState != null) CurrentState.OnUpdate();
+        }
+
+        public void AddState(string key, VoidHandler updateFunction)
+        {
+            var newState = new StateWithEvents();
+            newState.OnUpdateEvent += updateFunction;
+            newState.Name = key;
+            AddState(newState);
+        }
+
         public virtual void AddTransition(IState originalStateKey, IState finalStateKey)
         {
-            if (!States.ContainsKey(originalStateKey.Name))
+            AddTransition(originalStateKey.Name, finalStateKey.Name);
+        }
+
+        public virtual void AddTransition(string originalStateKey, string finalStateKey)
+        {
+            if (!States.ContainsKey(originalStateKey))
             {
                 throw new Exception(String.Format("Cannot Add transition because {0} is not in this state machine", originalStateKey));
             }
 
-            if (!States.ContainsKey(finalStateKey.Name))
+            if (!States.ContainsKey(finalStateKey))
             {
                 throw new Exception(String.Format("Cannot Add transition because {0} is not in this state machine", finalStateKey));
             }
 
             List<string> finalTransitions;
-            if (Transitions.TryGetValue(originalStateKey.Name, out finalTransitions))
+            if (Transitions.TryGetValue(originalStateKey, out finalTransitions))
             {
 
             }
             else
             {
                 finalTransitions = new List<string>();
-                finalTransitions.Add(finalStateKey.Name);
-                Transitions.Add(originalStateKey.Name, finalTransitions);
+                finalTransitions.Add(finalStateKey);
+                Transitions.Add(originalStateKey, finalTransitions);
             }
         }
 

@@ -1,14 +1,63 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections.Generic;
+using Assets.RTSCore.StateMachineComponents;
 using Assets.RTSCore.WorldMap;
+using Random = UnityEngine.Random;
 
 namespace Assets.RTSCore.Game
 {
-    public enum GameState { Planet, PlanetToLevelTransition, LoadingLevel, Level, LevelToPlanetTransition}
-
-    public class Game : MonoBehaviour
+    public class Game : StateMachine
     {
-        public GameState State { get; set; }
+        public string PlanetState = "Planet";
+        public string PlanetToLevelState = "PlanetToLevel";
+        public string LevelToPlanetState = "LevelToPlanet";
+        public string LoadingLevelState = "LoadingLevel";
+        public string LevelState = "Level";
+
+        private void Level_OnUpdateEvent()
+        {
+            
+        }
+
+        private void PlanetState_OnUpdateEvent()
+        {
+            if (WorldMap.SelectedLandingSite != null)
+            {
+                _initialMag = (MainCamera.transform.position - WorldMap.SelectedLandingSite.transform.position)
+                    .magnitude;
+            }
+        }
+
+        private void LoadingLevel_OnUpdateEvent()
+        {
+            LoadLevel();
+            MoveToState("Level");
+        }
+
+        private void PlanetToLevelt_OnUpdateEvent()
+        {
+            MainCamera.transform.position += _moveSpeed * (WorldMap.SelectedLandingSite.transform.position - MainCamera.transform.position).normalized;
+            float mag = (MainCamera.transform.position - WorldMap.SelectedLandingSite.transform.position).magnitude;
+            MainLight.intensity = 2.0f * (mag / _initialMag);
+            if (mag < _moveSpeed)
+            {
+                MainCamera.transform.position = WorldMap.SelectedLandingSite.transform.position;
+                MoveToState("LoadingLevel");
+            }
+        }
+
+        private void LevelToPlanet_OnUpdateEvent()
+        {
+            WorldMap.LandingSiteSelected(null);
+            WorldMap.ActivePlanet.ResumePlanetView();
+            ActiveLevel.gameObject.SetActive(false);
+            WorldMap.gameObject.SetActive(true);
+            MainLight.intensity = 2.0f;
+            MoveCameraToPlanetView(WorldMap.ActivePlanet);
+            MoveToState("Planet");
+        }
+
         public GameConfiguration Configuration;
 
         public Economy.Economy Economy = new Economy.Economy();
@@ -27,8 +76,20 @@ namespace Assets.RTSCore.Game
 
         protected void Start()
         {
+            AddState(PlanetState, PlanetState_OnUpdateEvent);
+            AddState(PlanetToLevelState, PlanetToLevelt_OnUpdateEvent);
+            AddState(LevelToPlanetState, LevelToPlanet_OnUpdateEvent);
+            AddState(LoadingLevelState, LoadingLevel_OnUpdateEvent);
+            AddState(LevelState, Level_OnUpdateEvent);
+
+            AddTransition(PlanetState, PlanetToLevelState);
+            AddTransition(PlanetToLevelState, LoadingLevelState);
+            AddTransition(LoadingLevelState, LevelState);
+            AddTransition(LevelState, LevelToPlanetState);
+            AddTransition(LevelToPlanetState, PlanetState);
+
             GameTimeManager.CurrentGameTime = new GameDateTime();
-            State = GameState.Planet;
+            MoveToState(PlanetState);
             ActivePlayer = Instantiate(ActivePlayer);
             WorldMap = Instantiate(WorldMap);
 
@@ -41,12 +102,12 @@ namespace Assets.RTSCore.Game
 
         public void SwitchToWorldView()
         {
-            State = GameState.LevelToPlanetTransition;
+            MoveToState("LevelToPlanet");
         }
 
         public void SwitchToLevelView()
         {
-            State = GameState.PlanetToLevelTransition;
+            MoveToState("PlanetToLevel");
         }
 
         public void LoadLevel()
@@ -82,45 +143,10 @@ namespace Assets.RTSCore.Game
         private float _moveSpeed = 0.5f;
 
         private float _initialMag = 1;
-        protected void Update()
+        protected override void Update()
         {
+            base.Update();
             GameTimeManager.Update(Time.deltaTime);
-
-            switch (State)
-            {
-                case GameState.Planet:
-                    if (WorldMap.SelectedLandingSite != null)
-                    {
-                        _initialMag = (MainCamera.transform.position - WorldMap.SelectedLandingSite.transform.position)
-                            .magnitude;
-                    }
-                    break;
-                case GameState.PlanetToLevelTransition:
-                    MainCamera.transform.position += _moveSpeed * (WorldMap.SelectedLandingSite.transform.position - MainCamera.transform.position).normalized;
-                    float mag = (MainCamera.transform.position - WorldMap.SelectedLandingSite.transform.position).magnitude;
-                    MainLight.intensity = 2.0f * (mag / _initialMag);
-                    if (mag < _moveSpeed)
-                    {
-                        MainCamera.transform.position = WorldMap.SelectedLandingSite.transform.position;
-                        State = GameState.LoadingLevel;
-                    }
-                    break;
-                case GameState.LevelToPlanetTransition:
-                    WorldMap.LandingSiteSelected(null);
-                    WorldMap.ActivePlanet.ResumePlanetView();
-                    ActiveLevel.gameObject.SetActive(false);
-                    WorldMap.gameObject.SetActive(true);
-                    MainLight.intensity = 2.0f;
-                    MoveCameraToPlanetView(WorldMap.ActivePlanet);
-                    State = GameState.Planet;
-                    break;
-                case GameState.LoadingLevel:
-                    LoadLevel();
-                    State = GameState.Level;
-                    break;
-                case GameState.Level:
-                    break;
-            }
         }
 
         public void PlayerDefeated()

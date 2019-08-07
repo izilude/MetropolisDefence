@@ -6,6 +6,7 @@
     {
         public event VoidHandler OnEnterEvent;
         public event VoidHandler OnExitEvent;
+        public event VoidHandler OnUpdateEvent;
 
         public string Name { get; set; }
 
@@ -19,6 +20,14 @@
             if (OnExitEvent != null)
             {
                 OnExitEvent();
+            }
+        }
+
+        public void OnUpdate()
+        {
+            if (OnUpdateEvent != null)
+            {
+                OnUpdateEvent();
             }
         }
     }

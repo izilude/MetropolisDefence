@@ -74,9 +74,9 @@ namespace Assets.RTSCore.WorldMap
 
         void OnGUI()
         {
-            switch (Game.Game.Instance.State)
+            switch (Game.Game.Instance.CurrentState.Name)
             {
-                case GameState.Planet:
+                case "Planet":
                     GUI.BeginGroup(new Rect(0, 0, Screen.width, Screen.height));
                     Draw();
                     GUI.EndGroup();
