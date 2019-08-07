@@ -94,6 +94,15 @@ namespace Assets.RTSCore.Level
                 UserInput.KeyboardActivity();
                 Hud.ObjectFollowCursor(Map);
             }
+
+            // check for dead world objects
+            foreach (var wob in WorldObjects)
+            {
+                if (wob.CurrentState.Name == "Dead")
+                {
+                    Destroy(wob.gameObject);
+                }
+            }
         }
 
         public bool CanBuildObject(BuildableWorldObject worldObject)

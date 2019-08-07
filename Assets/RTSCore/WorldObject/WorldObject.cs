@@ -1,11 +1,12 @@
 ﻿using Assets.RTSCore.Map;
 using Assets.RTSCore.Requests;
+using Assets.RTSCore.StateMachineComponents;
 using UnityEngine;
 
 namespace Assets.RTSCore.WorldObject
 {
 	[System.Serializable]
-    public abstract class WorldObject : MonoBehaviour
+    public abstract class WorldObject : StateMachine
     {
         public string Name;
 
@@ -14,7 +15,8 @@ namespace Assets.RTSCore.WorldObject
 
         public Inventory.Inventory MyInventory;
 
-        public bool IsDead { get; set; }
+        public string DeadState = "Dead";
+
 		public Request CurrentRequest { get; set; }
 		private RequestContainer _requests;
 		public RequestContainer Requests {
@@ -36,7 +38,7 @@ namespace Assets.RTSCore.WorldObject
         // Use this for initialization
         protected virtual void Start()
         {
-			IsDead = false;
+			AddState(new StateOverridable() {Name = DeadState} );
         }
 
         protected virtual void OnGUI()
@@ -45,12 +47,13 @@ namespace Assets.RTSCore.WorldObject
         }
 
         // Update is called once per frame
-        protected virtual void Update()
+        protected override void Update()
         {
+            base.Update();
+
 			if (MaxHealth != 0 && CurrentHealth <= 0) 
 			{
-				IsDead = true;
-				GameObject.Destroy(this.gameObject);
+                MoveToState(DeadState);
 			}
         }
 
@@ -68,15 +71,6 @@ namespace Assets.RTSCore.WorldObject
 
         public void SetSelected(bool selected)
         {
-			if (selected) 
-			{
-
-			} 
-			else 
-			{
-
-			}
-
             CurrentlySelected = selected;
         }
 
