@@ -32,7 +32,7 @@ namespace Assets.RTSCore.Game
         private void LoadingLevel_OnUpdateEvent()
         {
             LoadLevel();
-            MoveToState("Level");
+            MoveToState(LevelState);
         }
 
         private void PlanetToLevelt_OnUpdateEvent()
@@ -43,7 +43,7 @@ namespace Assets.RTSCore.Game
             if (mag < _moveSpeed)
             {
                 MainCamera.transform.position = WorldMap.SelectedLandingSite.transform.position;
-                MoveToState("LoadingLevel");
+                MoveToState(LoadingLevelState);
             }
         }
 
@@ -55,7 +55,7 @@ namespace Assets.RTSCore.Game
             WorldMap.gameObject.SetActive(true);
             MainLight.intensity = 2.0f;
             MoveCameraToPlanetView(WorldMap.ActivePlanet);
-            MoveToState("Planet");
+            MoveToState(PlanetState);
         }
 
         public GameConfiguration Configuration;
@@ -102,12 +102,12 @@ namespace Assets.RTSCore.Game
 
         public void SwitchToWorldView()
         {
-            MoveToState("LevelToPlanet");
+            MoveToState(LevelToPlanetState);
         }
 
         public void SwitchToLevelView()
         {
-            MoveToState("PlanetToLevel");
+            MoveToState(PlanetToLevelState);
         }
 
         public void LoadLevel()
