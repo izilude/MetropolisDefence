@@ -98,7 +98,7 @@ namespace Assets.RTSCore.Level
             // check for dead world objects
             foreach (var wob in WorldObjects)
             {
-                if (wob.CurrentState.Name == "Dead")
+                if (wob != null && wob.CurrentState != null && wob.CurrentState.Name == "Dead")
                 {
                     Destroy(wob.gameObject);
                 }
